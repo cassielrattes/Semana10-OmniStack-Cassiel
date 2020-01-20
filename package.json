@@ -1,0 +1,8 @@
+{
+  "name": "semanaomnistack10",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/cassielrattes/Semana10-OmniStack-Cassiel.git",
+  "author": "cassielrattes <cassielrattes@gmail.com>",
+  "license": "MIT"
+}
