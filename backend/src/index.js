@@ -1,9 +1,14 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const http = require("http");
 const routes = require("./routes");
+const { setupWebSocket } = require("./websocket");
 
 const app = express();
+const server = http.Server(app);
+
+setupWebSocket(server);
 
 mongoose.connect(
   "mongodb+srv://cassiel123:cassiel123@mernstack1-lh5nf.mongodb.net/week10?retryWrites=true&w=majority",
@@ -18,7 +23,7 @@ app.use(cors());
 app.use(express.json());
 app.use(routes);
 
-app.listen(5000);
+server.listen(5000);
 
 // Métodos HTTP: GET, POST, PUT, DELETE
 
