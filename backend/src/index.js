@@ -10,14 +10,11 @@ const server = http.Server(app);
 
 setupWebSocket(server);
 
-mongoose.connect(
-  "mongodb+srv://cassiel123:cassiel123@mernstack1-lh5nf.mongodb.net/week10?retryWrites=true&w=majority",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true
-  }
-);
+mongoose.connect("your MongoDB connection", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true
+});
 
 app.use(cors());
 app.use(express.json());
